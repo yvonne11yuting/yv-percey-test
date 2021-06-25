@@ -1,0 +1,127 @@
+$white: #fff;
+$red: #db3d44;
+$gray: #eee;
+$dark: #191919;
+$phone-width: 414px;
+
+%default-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+  margin: 8px auto;
+  outline: none;
+  cursor: pointer;
+}
+
+.rt-calendar {
+  -webkit-text-size-adjust: 100%;
+  font-family: "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", Verdana, sans-serif;
+  width: 260px;
+  padding: 10px;
+  color: $dark;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid $gray;
+  background: $white;
+  box-shadow: 1px 1px 3px 0 #00000012;
+
+  @media (max-width: $phone-width) {
+    width: inherit;
+  }
+}
+
+.rt-calendar__selected {
+  color: $white;
+  background-color: $red;
+}
+
+.rt-calendar__outside {
+  color: $gray;
+}
+
+.rt-calendar__reset-btn {
+  padding: 8px;
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.rt-calendar__action-btn {
+  flex: 1;
+  border-radius: 3px;
+  &:hover {
+    background-color: $gray;
+  }
+}
+
+.rt-calendar__icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  &:hover {
+    background-color: $gray;
+  }
+}
+
+.rt-calendar__header__cur-month {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: none;
+}
+
+.rt-calendar__day-name {
+  display: flex;
+  justify-content: space-around;
+}
+
+.rt-calendar__main {
+  margin-top: 10px;
+}
+
+/* date mode */
+.rt-calendar__date {
+  display: grid;
+  grid: auto/repeat(7, 1fr);
+  outline: none;
+}
+
+.rt-calendar__date__day {
+  @extend %default-option;
+  width: 20px;
+  height: 20px;
+  &:hover:not(.rt-calendar__selected) {
+    color: $dark;
+    background-color: $gray;
+  }
+}
+
+.rt-calendar__date__day--today {
+  color: $red;
+}
+
+/* month & year mode */
+.rt-calendar__year,
+.rt-calendar__month {
+  display: grid;
+  grid: auto/repeat(4, 1fr);
+  outline: none;
+}
+
+.rt-calendar__year-name,
+.rt-calendar__month-name {
+  @extend %default-option;
+  width: 40px;
+  height: 40px;
+  margin: 15px auto;
+  &:hover {
+    color: $dark;
+    background-color: $gray;
+  }
+}
