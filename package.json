@@ -9,7 +9,8 @@
     "watch": "NODE_ENV=development rollup -c -w",
     "storybook": "start-storybook",
     "storybook:build": "build-storybook -c .storybook -o demo",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "snapshot": "build-storybook && percy-storybook --widths=320,1280"
   },
   "peerDependencies": {
     "react": "^16.13.0",
@@ -20,6 +21,8 @@
     "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
+    "@percy/cli": "^1.0.0-beta.56",
+    "@percy/storybook": "^3.3.1",
     "@rollup/plugin-alias": "^3.0.1",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-image": "^2.0.4",
