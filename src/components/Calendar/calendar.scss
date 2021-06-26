@@ -1,5 +1,5 @@
 $white: #fff;
-$red: skyblue;
+$red: navy;
 $gray: #eee;
 $dark: #191919;
 $phone-width: 414px;
@@ -29,6 +29,7 @@ $phone-width: 414px;
 
   @media (max-width: $phone-width) {
     width: inherit;
+    color: navy;
   }
 }
 
