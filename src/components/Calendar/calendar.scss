@@ -1,5 +1,5 @@
 $white: #fff;
-$red: navy;
+$red: skyblue;
 $gray: #eee;
 $dark: #191919;
 $phone-width: 414px;
@@ -10,7 +10,7 @@ $phone-width: 414px;
   justify-content: center;
   padding: 5px;
   border-radius: 50%;
-  margin: 9px auto;
+  margin: 8px auto;
   outline: none;
   cursor: pointer;
 }
@@ -29,7 +29,6 @@ $phone-width: 414px;
 
   @media (max-width: $phone-width) {
     width: inherit;
-    color: navy;
   }
 }
 
