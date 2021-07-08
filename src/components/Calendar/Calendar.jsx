@@ -185,6 +185,7 @@ const Calendar = ({ lang, date: rawDate, onSelect }) => {
           >
             <img src={Iconleft} alt="back" />
           </button>
+          <div style={{ width: '12px', height: '4px' }} />
           <button
             data-action="mode"
             className="rt-calendar__reset-btn rt-calendar__action-btn"
